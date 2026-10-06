@@ -1,0 +1,271 @@
+@keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+
+
+/* Reset de estilos padrão */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'open sans', Arial, sans-serif;
+}
+
+
+
+/* Estilo do corpo da página */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    background-image: url('https://images.unsplash.com/photo-1673794784636-2e69436d3eee?q=80&w=1528&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover;
+    background-position: center;
+    color: #f2f2f3f6;
+    transition: background-color 0.3s, color 0.3s;
+
+}
+
+/* Estilo do corpo da página no modo claro */
+body.dark-mode {
+    background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    color: #f3f0f0f6;
+}
+
+/* Estilo do relógio */
+.relogio {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+    width: 900px;
+    background: transparent;
+    border-radius: 10px;
+    box-shadow: 0px 8px 10px rgb(240, 239, 241);
+    flex-wrap: nowrap; /* Impede os itens de irem para a linha de baixo */
+  overflow-x: auto;  /* Cria uma barra de rolagem se a tela for menor que os itens */
+}
+    
+
+
+
+/* Estilo dos elementos do relógio */
+.relogio div {
+    height: 170px;
+    width: 1;
+    Display: flex;
+    Flex-direction: column;
+    Align-items: center;
+    Justify-content: center;
+    Font-size: 50px;
+    Color: #0d0e0df6;
+    Text-shadow: 0px 0px 10px rgba(243, 245, 237, 0.952);
+    border-radius: 50px;flex-wrap: nowrap; /* Impede os itens de irem para a linha de baixo */
+  overflow-x: auto;  /* Cria uma barra de rolagem se a tela for menor que os itens */
+}
+
+
+
+/* Botão de alternância de tema escuro */
+button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #0f0f0ff6;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.1s ease;
+    box-shadow: 0px 0px 10px rgba(243, 245, 237, 0.952);
+}
+
+
+
+/* Relógio Digital */
+
+p {
+    position: fixed;
+    align-items: center;       
+    top: 20px;
+    left: center;
+    font-size: 50px;
+    font-family: 'Arial', sans-serif;
+    color: #030303f6;
+    box-shadow: 0px 0px 10px rgba(243, 245, 237, 0.952);
+    text-shadow: 0px 0px 10px rgba(243, 245, 237, 0.952);
+    border-radius: 5px;
+}
+
+
+.dark{
+    background-color: #f3f0f0f6;
+    color: #060607;
+}
+
+.btn{
+    padding: 12px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    border: none;
+    border-radius: 25px;
+    background-color: transparent;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    transition: all 0.3s;
+    align-items: center;
+    gap: 8px;
+    text-decoration: #010113;
+}
+
+
+.btn:hover {
+    background-color: #4e4d5cf6;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+
+.icon {
+    font-size: 20px;
+}
+
+.dark .icon-sun {
+    display: none;
+   
+}
+
+.icon-moon {
+    display: none;
+}
+
+.dark .icon-moon {
+    display: inline-block;
+}
+
+.icon-sun {
+    display: inline-block;
+}
+
+
+.data {
+    position: fixed;
+    font-family: 'Arial', sans-serif;
+    height: 60px;
+    width: 260px;
+    bottom: 100px;
+    right: 70px;
+    font-size: 50px;
+    color: #131212f6;
+    text-shadow: 0px 0px 10px rgba(243, 245, 237, 0.952);
+    box-shadow: 0px 0px 10px rgba(243, 245, 237, 0.952);
+    border-radius: 10px;
+    padding: 5px;
+    transform: translateY(-190px) translateX(-395%);
+}
+
+.nomemes {
+    position: fixed;
+    font-family: 'Arial', sans-serif;
+    height: 60px;
+    width: 200px;
+    bottom: 100px;
+    right: 70px;
+    font-size: 50px;
+    color: #131212f6;
+    text-shadow: 0px 0px 10px rgba(243, 245, 237, 0.952);
+    box-shadow: 0px 0px 10px rgba(243, 245, 237, 0.952);
+    border-radius: 5px;
+    padding: 5px;
+    transform: translateY(-190px) translateX(-210%);
+    flex-wrap: nowrap; /* Impede os itens de irem para a linha de baixo */
+    overflow-x: auto;  /* Cria uma barra de rolagem se a tela for menor que os itens */
+}
+
+
+.card {
+    position: fixed;
+    font-family: 'Arial', sans-serif;
+    height: 230px;
+    width: 200px;
+    bottom: 100px;
+    right: 70px;
+    font-size: 50px;
+    color: #131212f6;
+    text-shadow: 0px 0px 10px rgba(243, 245, 237, 0.952);
+    box-shadow: 0px 0px 10px rgba(243, 245, 237, 0.952);
+    border-radius: 5px;
+    padding: 5px;
+    transform: translateY(-20px) translateX(-360%);
+    }
+
+.location {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #0c0c0c;
+      margin-bottom: 12px;
+}
+
+
+.temp-container {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      margin: 16px 0;flex-wrap: nowrap; /* Impede os itens de irem para a linha de baixo */
+    
+    }
+    
+
+    .temperature {
+      font-size: 4.5rem;
+      font-weight: 100;
+      line-height: 1;
+      background: linear-gradient(180deg, #dcdde0, #eaebee);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    
+   }
+    
+
+    .unit {
+      font-size: 1.8rem;
+      font-weight: 600;
+      color: #38bdf8;
+      margin-top: 4px;
+    }
+
+    .status {
+      font-size: 0.95rem;
+      color: #0d0d0e;
+      margin-bottom: 20px;
+    }
+
+    .update-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: #64748b;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 6px 12px;
+      border-radius: 20px;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      background-color: #22c55e;
+      border-radius: 50%;
+      animation: pulse 1.5s infinite;
+    }
